@@ -10,15 +10,15 @@
 		(rev "0.0.1")
 	)
 	(lib_symbols
-		(symbol "Switch:SW_Push"
+		(symbol "PCM_marbastlib-choc:choc_v1_SW_solder"
 			(pin_numbers hide)
 			(pin_names
 				(offset 1.016) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "SW"
-				(at 1.27 2.54 0)
+			(property "Reference" "CH"
+				(at 3.048 1.016 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -26,16 +26,16 @@
 					(justify left)
 				)
 			)
-			(property "Value" "SW_Push"
-				(at 0 -1.524 0)
+			(property "Value" "choc_v1_SW_solder"
+				(at 0 -3.81 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Footprint" ""
-				(at 0 5.08 0)
+			(property "Footprint" "PCM_marbastlib-choc:SW_choc_v1_1u"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -44,7 +44,7 @@
 				)
 			)
 			(property "Datasheet" "~"
-				(at 0 5.08 0)
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -52,7 +52,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Push button switch, generic, two pins"
+			(property "Description" "Push button switch, normally open, two pins, 45° tilted"
 				(at 0 0 0)
 				(effects
 					(font
@@ -70,9 +70,9 @@
 					(hide yes)
 				)
 			)
-			(symbol "SW_Push_0_1"
+			(symbol "choc_v1_SW_solder_0_1"
 				(circle
-					(center -2.032 0)
+					(center -1.1684 1.1684)
 					(radius 0.508)
 					(stroke
 						(width 0)
@@ -84,7 +84,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 1.27) (xy 0 3.048)
+						(xy -0.508 2.54) (xy 2.54 -0.508)
 					)
 					(stroke
 						(width 0)
@@ -96,7 +96,31 @@
 				)
 				(polyline
 					(pts
-						(xy 2.54 1.27) (xy -2.54 1.27)
+						(xy 1.016 1.016) (xy 2.032 2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 2.54) (xy -1.524 1.524) (xy -1.524 1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 -1.524) (xy 2.54 -2.54) (xy 2.54 -2.54) (xy 2.54 -2.54)
 					)
 					(stroke
 						(width 0)
@@ -107,7 +131,7 @@
 					)
 				)
 				(circle
-					(center 2.032 0)
+					(center 1.143 -1.1938)
 					(radius 0.508)
 					(stroke
 						(width 0)
@@ -118,8 +142,8 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
+					(at -2.54 2.54 0)
+					(length 0)
 					(name "1"
 						(effects
 							(font
@@ -136,8 +160,8 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
+					(at 2.54 -2.54 180)
+					(length 0)
 					(name "2"
 						(effects
 							(font
@@ -728,22 +752,22 @@
 		)
 	)
 	(junction
-		(at 96.52 52.07)
+		(at 109.22 48.26)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "28510d12-6065-49ca-8657-e4d174a9229b")
+		(uuid "4f91f51f-9de2-4f3c-a950-ccba1b88014b")
 	)
 	(junction
-		(at 77.47 52.07)
+		(at 106.68 48.26)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "5d8a09b6-b383-4fb9-b791-d6fa1e7199e3")
+		(uuid "5f99b74c-785f-467f-b79c-dd2b1eee4a17")
 	)
 	(junction
-		(at 73.66 52.07)
+		(at 125.73 48.26)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "b906ce5f-25cd-4722-9183-9ce2f792494a")
+		(uuid "7deb0b2f-1f8e-4b50-a8d0-f1af1c87d310")
 	)
 	(no_connect
 		(at 30.48 54.61)
@@ -819,13 +843,43 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 48.26) (xy 115.57 52.07)
+			(xy 109.22 35.56) (xy 109.22 48.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "187aedd0-ef58-4fcc-b2e0-2803d67b23d6")
+		(uuid "3cd9ec9f-7bc5-4596-82fe-ca90e2a95fa6")
+	)
+	(wire
+		(pts
+			(xy 106.68 48.26) (xy 109.22 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4113f85a-9809-450b-a844-2b8b0e5db1a1")
+	)
+	(wire
+		(pts
+			(xy 106.68 35.56) (xy 109.22 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "454c9310-d570-4270-8110-98d8ad532a8f")
+	)
+	(wire
+		(pts
+			(xy 87.63 48.26) (xy 106.68 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "459d43c4-ee6e-4e41-8718-b2154f8f5457")
 	)
 	(wire
 		(pts
@@ -835,97 +889,27 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "1f7352db-2002-4750-bc1c-431aaeb3c1a3")
+		(uuid "5ef00368-f9aa-4af3-848e-43628e60b0af")
 	)
 	(wire
 		(pts
-			(xy 77.47 48.26) (xy 77.47 52.07)
+			(xy 58.42 36.83) (xy 60.96 36.83)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1fdcaa8d-2edb-4698-8832-1f57fdb76be0")
+		(uuid "ad4352ce-b629-4ed8-9cf1-7a2efd641999")
 	)
 	(wire
 		(pts
-			(xy 96.52 48.26) (xy 96.52 52.07)
+			(xy 127 48.26) (xy 125.73 48.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "21b677f5-7e65-48f6-b878-9a666b1e5441")
-	)
-	(wire
-		(pts
-			(xy 87.63 48.26) (xy 88.9 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3998d777-6176-47df-b0a3-f094092fb132")
-	)
-	(wire
-		(pts
-			(xy 58.42 39.37) (xy 60.96 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7610d5a0-ca6f-4338-88fa-8c304b75551b")
-	)
-	(wire
-		(pts
-			(xy 96.52 52.07) (xy 77.47 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8773bbe1-24a4-44de-9985-31173d95f1ba")
-	)
-	(wire
-		(pts
-			(xy 106.68 35.56) (xy 107.95 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "91a03ec5-3503-4ff3-bc95-858581cb2ae9")
-	)
-	(wire
-		(pts
-			(xy 58.42 44.45) (xy 60.96 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "941b4700-ab67-4e51-a885-08a292d29a06")
-	)
-	(wire
-		(pts
-			(xy 77.47 52.07) (xy 73.66 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9ab14d39-3976-4389-9d0c-bf14b01c28ab")
-	)
-	(wire
-		(pts
-			(xy 106.68 48.26) (xy 107.95 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a3f58d1d-a56e-4274-983c-8ed026dd9c13")
+		(uuid "b2773ea5-5d04-4928-8d55-2fb1b8ed68d6")
 	)
 	(wire
 		(pts
@@ -939,99 +923,57 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 36.83) (xy 60.96 36.83)
+			(xy 58.42 39.37) (xy 60.96 39.37)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "bdcc7efb-0466-4802-a00e-62eac195d85f")
+		(uuid "bf6e1634-69cd-4fb1-8202-5e77146e153d")
 	)
 	(wire
 		(pts
-			(xy 115.57 52.07) (xy 96.52 52.07)
+			(xy 109.22 48.26) (xy 125.73 48.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d6035586-8a03-4f3d-88d9-c5aeb0fc4283")
+		(uuid "e8ef1015-da26-4753-9eb6-7490d6653580")
 	)
 	(wire
 		(pts
-			(xy 73.66 35.56) (xy 73.66 52.07)
+			(xy 58.42 44.45) (xy 60.96 44.45)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "dea8609f-e01a-4ac4-a04c-fe25315d22b5")
-	)
-	(wire
-		(pts
-			(xy 96.52 35.56) (xy 73.66 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e9d89f66-c31c-43f6-8a0f-67c894ce1504")
-	)
-	(wire
-		(pts
-			(xy 125.73 48.26) (xy 127 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "edd9ad89-6d1d-4f18-90f1-c9649b55c532")
+		(uuid "f2d1c246-fb7d-4211-a8e3-aeb7831ad639")
 	)
 	(global_label "key1"
 		(shape input)
-		(at 107.95 35.56 0)
+		(at 101.6 30.48 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "40b7ecc9-c442-46c7-9960-db275b82cac2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 115.229 35.56 0)
+			(at 94.321 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
 	)
 	(global_label "key4"
-		(shape input)
-		(at 60.96 44.45 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "53b137c7-7a75-49ca-aa84-44d61c9f27ab")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 68.239 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "key1"
 		(shape input)
 		(at 60.96 36.83 0)
 		(fields_autoplaced yes)
@@ -1041,7 +983,7 @@
 			)
 			(justify left)
 		)
-		(uuid "5dbdea03-d680-4f4c-aac1-cdb7ca95950f")
+		(uuid "53b137c7-7a75-49ca-aa84-44d61c9f27ab")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 68.239 36.83 0)
 			(effects
@@ -1053,95 +995,73 @@
 			)
 		)
 	)
-	(global_label "key4"
+	(global_label "key1"
 		(shape input)
-		(at 127 48.26 0)
+		(at 60.96 44.45 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left)
+		)
+		(uuid "5dbdea03-d680-4f4c-aac1-cdb7ca95950f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 68.239 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "key4"
+		(shape input)
+		(at 120.65 43.18 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
 		)
 		(uuid "66593e2c-6fe3-4d32-b068-e253fb112fef")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 134.279 48.26 0)
+			(at 113.371 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
 	)
 	(global_label "key2"
 		(shape input)
-		(at 88.9 48.26 0)
+		(at 82.55 43.18 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "6df1d536-33cd-446e-9b97-7f77cb536d96")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 96.179 48.26 0)
+			(at 75.271 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
 	)
 	(global_label "key3"
-		(shape input)
-		(at 60.96 41.91 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "916abf01-6e5d-4945-944d-0909d3897ed4")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 68.239 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "key3"
-		(shape input)
-		(at 107.95 48.26 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d86aec5e-4da1-4292-9964-f7b92211f09c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 115.229 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "key2"
 		(shape input)
 		(at 60.96 39.37 0)
 		(fields_autoplaced yes)
@@ -1151,7 +1071,7 @@
 			)
 			(justify left)
 		)
-		(uuid "f21fc464-3631-4465-8ac8-3ad76db8274f")
+		(uuid "916abf01-6e5d-4945-944d-0909d3897ed4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 68.239 39.37 0)
 			(effects
@@ -1163,71 +1083,47 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 120.65 48.26 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
+	(global_label "key3"
+		(shape input)
+		(at 101.6 43.18 180)
 		(fields_autoplaced yes)
-		(uuid "0328159c-3ec8-4e6e-91ca-88a99aee22b8")
-		(property "Reference" "SW4"
-			(at 120.65 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify right)
 		)
-		(property "Value" "SW_Push"
-			(at 120.65 43.18 0)
+		(uuid "d86aec5e-4da1-4292-9964-f7b92211f09c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 94.321 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Footprint" ""
-			(at 120.65 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
+				(justify right)
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 120.65 43.18 0)
+	)
+	(global_label "key2"
+		(shape input)
+		(at 60.96 41.91 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f21fc464-3631-4465-8ac8-3ad76db8274f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 68.239 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 				(hide yes)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 120.65 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "2afd272a-176f-4b62-b659-3a34b0a887e2")
-		)
-		(pin "1"
-			(uuid "4684417d-916b-4899-adab-f1de8a16106e")
-		)
-		(instances
-			(project "stratagum"
-				(path "/0a3c8e8b-adab-4084-a804-dc5be5aca7be"
-					(reference "SW4")
-					(unit 1)
-				)
 			)
 		)
 	)
@@ -1299,7 +1195,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 73.66 52.07 0)
+		(at 127 48.26 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1307,7 +1203,7 @@
 		(dnp no)
 		(uuid "48185152-284d-48f4-a167-5a102747ae07")
 		(property "Reference" "#PWR02"
-			(at 73.66 58.42 0)
+			(at 127 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1316,7 +1212,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 73.66 57.15 0)
+			(at 127 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1324,7 +1220,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 73.66 52.07 0)
+			(at 127 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1333,7 +1229,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 73.66 52.07 0)
+			(at 127 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1342,7 +1238,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 73.66 52.07 0)
+			(at 127 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1363,33 +1259,33 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 82.55 48.26 0)
+		(lib_id "PCM_marbastlib-choc:choc_v1_SW_solder")
+		(at 123.19 45.72 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "5130a627-92f6-44e7-90a7-df2ea380fb9f")
-		(property "Reference" "SW2"
-			(at 82.55 40.64 0)
+		(uuid "5a7b32c4-8f77-48ac-8083-503c6f5e6c76")
+		(property "Reference" "CH4"
+			(at 123.19 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "SW_Push"
-			(at 82.55 43.18 0)
+		(property "Value" "choc_v1_SW_solder"
+			(at 123.19 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 82.55 43.18 0)
+		(property "Footprint" "PCM_marbastlib-xp-choc:SW_choc_v2_1u"
+			(at 123.19 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1398,7 +1294,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 82.55 43.18 0)
+			(at 123.19 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1406,58 +1302,58 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 82.55 48.26 0)
+		(property "Description" "Push button switch, normally open, two pins, 45° tilted"
+			(at 123.19 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "2"
-			(uuid "20925d52-4cd6-45c5-a0fc-edce455c2888")
 		)
 		(pin "1"
-			(uuid "6cd4191d-f42e-4642-bca4-f4bf2f664e08")
+			(uuid "7429a210-c5f6-4840-bd87-b8789392ee27")
+		)
+		(pin "2"
+			(uuid "3dd08f85-28ad-4888-bc17-ff0b1a54bb64")
 		)
 		(instances
 			(project "stratagum"
 				(path "/0a3c8e8b-adab-4084-a804-dc5be5aca7be"
-					(reference "SW2")
+					(reference "CH4")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 101.6 48.26 0)
+		(lib_id "PCM_marbastlib-choc:choc_v1_SW_solder")
+		(at 85.09 45.72 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "9174c880-035b-4217-b068-b1ecdc723c81")
-		(property "Reference" "SW3"
-			(at 101.6 40.64 0)
+		(uuid "9c7b42f1-b069-4382-bc6c-7491296039d6")
+		(property "Reference" "CH2"
+			(at 85.09 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "SW_Push"
-			(at 101.6 43.18 0)
+		(property "Value" "choc_v1_SW_solder"
+			(at 85.09 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 101.6 43.18 0)
+		(property "Footprint" "PCM_marbastlib-xp-choc:SW_choc_v2_1u"
+			(at 85.09 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1466,7 +1362,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 101.6 43.18 0)
+			(at 85.09 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1474,58 +1370,58 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 101.6 48.26 0)
+		(property "Description" "Push button switch, normally open, two pins, 45° tilted"
+			(at 85.09 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "2"
-			(uuid "d0781fe6-a18a-491b-a17e-2eb08bf9e2c3")
 		)
 		(pin "1"
-			(uuid "611fad45-d7b3-4bf9-a055-712535b9d0fd")
+			(uuid "5785de92-8b4d-4229-89a0-3dae3e27c905")
+		)
+		(pin "2"
+			(uuid "34b28ff0-3380-4f56-b3c0-a7b081a61bba")
 		)
 		(instances
 			(project "stratagum"
 				(path "/0a3c8e8b-adab-4084-a804-dc5be5aca7be"
-					(reference "SW3")
+					(reference "CH2")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 101.6 35.56 0)
+		(lib_id "PCM_marbastlib-choc:choc_v1_SW_solder")
+		(at 104.14 45.72 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "a3de4a71-e5b0-4570-8203-db9ba7c1d5e3")
-		(property "Reference" "SW1"
-			(at 101.6 27.94 0)
+		(uuid "b1bccaba-3a94-42ac-b7cb-125c5ec6c4a6")
+		(property "Reference" "CH3"
+			(at 104.14 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "SW_Push"
-			(at 101.6 30.48 0)
+		(property "Value" "choc_v1_SW_solder"
+			(at 104.14 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 101.6 30.48 0)
+		(property "Footprint" "PCM_marbastlib-xp-choc:SW_choc_v2_1u"
+			(at 104.14 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1534,7 +1430,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 101.6 30.48 0)
+			(at 104.14 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1542,25 +1438,93 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 101.6 35.56 0)
+		(property "Description" "Push button switch, normally open, two pins, 45° tilted"
+			(at 104.14 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "2"
-			(uuid "48257078-525e-4a87-afa0-cb05a2764360")
 		)
 		(pin "1"
-			(uuid "a764e87d-e0bf-4ec5-8b0d-9dfa31ba9125")
+			(uuid "edc27d2b-b287-43e2-9dfe-4680b0b12de0")
+		)
+		(pin "2"
+			(uuid "e9f1f2b1-f19c-4399-94f6-206dc8b5023a")
+		)
+		(instances
+			(project "stratagum"
+				(path "/0a3c8e8b-adab-4084-a804-dc5be5aca7be"
+					(reference "CH3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_marbastlib-choc:choc_v1_SW_solder")
+		(at 104.14 33.02 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ba46fae2-80b7-4145-97e8-9a0ea622994a")
+		(property "Reference" "CH1"
+			(at 104.14 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "choc_v1_SW_solder"
+			(at 104.14 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "PCM_marbastlib-xp-choc:SW_choc_v2_1u"
+			(at 104.14 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 104.14 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Push button switch, normally open, two pins, 45° tilted"
+			(at 104.14 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "25e01342-0dd8-40f4-9da0-71dc00bc64ab")
+		)
+		(pin "2"
+			(uuid "c9d37232-15de-47ed-83a9-38f7335ef16e")
 		)
 		(instances
 			(project ""
 				(path "/0a3c8e8b-adab-4084-a804-dc5be5aca7be"
-					(reference "SW1")
+					(reference "CH1")
 					(unit 1)
 				)
 			)
