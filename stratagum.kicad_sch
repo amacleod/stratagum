@@ -1,0 +1,18 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "0a3c8e8b-adab-4084-a804-dc5be5aca7be")
+	(paper "A4")
+	(title_block
+		(title "Stratagum")
+		(date "2025-06-09")
+		(rev "0.0.1")
+	)
+	(lib_symbols)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
