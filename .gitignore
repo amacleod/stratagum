@@ -1,3 +1,4 @@
 *-backups
 build/
 fp-info-cache
+~*.lck
